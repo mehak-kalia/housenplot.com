@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:housenplot1/home/onboarding-page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -8,8 +9,25 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+
+  navigateToHome(BuildContext context){
+
+
+    Future.delayed(
+        Duration(seconds: 3),
+            (){
+          Navigator.push(context, MaterialPageRoute(
+              builder: (context) => OnboardingPage() ));
+
+
+
+        }
+    );
+  }
   @override
   Widget build(BuildContext context) {
+
+    navigateToHome(context);
     return Scaffold(
       body: Center(
         child: Column(
@@ -24,7 +42,7 @@ class _SplashPageState extends State<SplashPage> {
             Divider(),
             SizedBox(height: 4,),
             Text("Powered By", style: TextStyle(color: Colors.grey, fontSize: 15)),
-            Text("Links Properties", style: TextStyle(color: Colors.greenAccent, fontSize: 20))
+            Text("Links Properties", style: TextStyle(color: Colors.green, fontSize: 18))
           ],
         ),
       ),

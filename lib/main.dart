@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:housenplot1/home/onboarding-page.dart';
 import 'package:housenplot1/home/splash-page.dart';
 
 void main() {
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
       ),
       routes: {
-        "/": (context) => SplashPage()
+        "/": (context) => SplashPage(),
+        "onboarding": (context) => OnboardingPage()
       },
       initialRoute: "/",
 
